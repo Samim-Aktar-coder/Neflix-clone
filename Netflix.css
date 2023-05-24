@@ -327,12 +327,17 @@ header {
 }
 
 .answer {
-    display: none;
-    margin: 1.5rem 2rem;
+    /* display: none; */
+    height: 0;
+    padding: 0 2rem;
+    overflow: hidden;
+    transition: .3s;
 }
 
 .question.show+.answer {
-    display: block;
+    /* display: block; */
+    height: initial;
+    padding: 1.5rem 2rem;
 }
 
 .faq__signin {
