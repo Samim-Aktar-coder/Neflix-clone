@@ -16,6 +16,7 @@
     :root {
         --heading-text: 2rem;
         --normal-text: 1rem;
+        --small-text: .9rem;
     }
 }
 
@@ -284,6 +285,7 @@ header {
 .faqs h1 {
     margin: auto;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .questions__container {
@@ -372,7 +374,6 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 2rem;
 }
 
 .footer-item {
@@ -519,7 +520,7 @@ header {
         padding: 0 1rem;
     }
 
-    .question i{
+    .question i {
         font-size: 1.8rem;
     }
 }
@@ -575,6 +576,7 @@ header {
 }
 
 @media screen and (max-width:425px) {
+
     .section__img video {
         width: 250px;
     }
@@ -582,11 +584,24 @@ header {
     .tv-2 .section__img video {
         width: 220px;
     }
+
+    .nav__sign select {
+        padding: .1rem .5rem;
+    }
+
+    .sign-btn {
+        padding: .2rem .8rem;
+    }
 }
 
 @media screen and (max-width:360px) {
     .section__img video {
         width: 220px;
+    }
+
+    .footer-item {
+        flex-basis: 100%;
+        row-gap: 0;
     }
 
     .tv-2 .section__img video {
