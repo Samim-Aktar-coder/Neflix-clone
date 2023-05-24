@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Dela+Gothic+One&family=Gentium+Book+Plus:wght@400;700&family=Lora:wght@400;500;600;700&family=Open+Sans:wght@400;600&family=Poppins:wght@400;500;600;700;800&family=Raleway:wght@500;600;700&family=Rubik:wght@400;500;600;700;800&display=swap');
+
+
+:root {
+    --heading-text: 3rem;
+    --normal-text: 1.4rem;
+    --small-text: 1.2rem;
+    --font-bold: 700;
+    --font-medium: 600;
+    --font-normal: 500;
+    --theme-color: #e50815;
+    --theme-color-hover: #d10412;
+}
+
+@media screen and (max-width:960px) {
+    :root {
+        --heading-text: 2rem;
+        --normal-text: 1rem;
+    }
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: #232323;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+/*!========== REUSABLE CSS CLASSES =========== */
+.heading-text {
+    font-size: var(--heading-text);
+    font-weight: var(--font-bold);
+}
+
+.p-text-lg {
+    font-size: var(--normal-text);
+    font-weight: var(--font-normal);
+}
+
+.p-text {
+    font-size: var(--small-text);
+    font-weight: var(--font-normal);
+}
+
+.section__bg {
+    background-color: #000;
+    padding: 4rem 10rem;
+    margin-bottom: .5rem;
+}
+
+
+.flex__center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section__info {
+    flex-basis: 50%;
+    width: 100%;
+    /* border: 1px solid white; */
+}
+
+.section__img {
+    flex-basis: 50%;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.section__img video {
+    position: absolute;
+    top: 48%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    width: 375px;
+    z-index: 1;
+}
+
+.section__img img {
+    width: 100%;
+    z-index: 2;
+}
+
+/*!============== NAVBAR ============== */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 10rem;
+}
+
+.nav__logo img {
+    width: 150px;
+}
+
+.nav__sign {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 1.3rem;
+}
+
+.nav__sign select {
+    background-color: rgba(0, 0, 0, 0.224);
+    padding: .2rem 1.2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.sign-btn {
+    background-color: var(--theme-color);
+    padding: .3rem 1.2rem;
+    border-radius: 5px;
+    font-size: .9rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-btn:hover {
+    background-color: var(--theme-color-hover);
+}
+
+/*!============== HEADER ============== */
+header {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url(./netflix-img/home-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    margin-bottom: .5rem;
+}
+
+.header__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+}
+
+.header__content .p-text-lg {
+    margin-bottom: 1rem;
+}
+
+.input__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .5rem;
+    margin-top: 1rem;
+}
+
+.input__control {
+    border: 1px solid #888888;
+    position: relative;
+    width: 400px;
+    height: 3.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.input__control input {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 45, 45, 0.53);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0 1rem;
+    font-size: .9rem;
+}
+
+
+
+.input__control label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: rgb(209, 209, 209);
+    transition: .4s;
+}
+
+.input__control input:focus+label,
+.input__control input:valid+label {
+    top: 20%;
+    font-size: .75rem;
+}
+
+.input__box button {
+    height: 3.5rem;
+    background-color: var(--theme-color);
+    padding-inline: 1rem;
+    border: none;
+    outline: none;
+    font-size: var(--normal-text);
+    display: flex;
+    align-items: center;
+    font-weight: var(--font-medium);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input__box button:hover {
+    background-color: var(--theme-color-hover);
+}
+
+.input__box button i {
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+
+/*!============== MOBLIE ============== */
+
+.mobile .section__img {
+    position: relative;
+}
+
+.mobile .section__img .stranger-things-box {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #232323;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: .7rem;
+    border-radius: .8rem;
+    width: 300px;
+}
+
+.stranger-things-box img {
+    width: 50px;
+}
+
+.stranger-things-box .text .name {
+    font-size: .9rem;
+    font-weight: var(--font-medium);
+}
+
+.stranger-things-box .text p {
+    font-size: .78rem;
+    color: #2861fd;
+}
+
+/*!============TV-2====== */
+.tv-2 .section__img video {
+    position: absolute;
+    top: 35%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    width: 315px;
+    z-index: 1;
+}
+
+/*!============ faqs ========== */
+.faqs {
+    flex-direction: column;
+}
+
+.faqs h1 {
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.questions__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    width: 100%;
+}
+
+.question-answer {
+    width: 100%;
+    background-color: #2d2d2d;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.5rem;
+    border-bottom: 1px solid black;
+    padding: 0 2rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.question:hover {
+    background-color: #4f4f4f;
+}
+
+.question i {
+    font-size: 2.7rem;
+    transition: .4s;
+}
+
+.question.show i {
+    transform: rotate(45deg);
+}
+
+.answer {
+    display: none;
+    margin: 1.5rem 2rem;
+}
+
+.question.show+.answer {
+    display: block;
+}
+
+.faq__signin {
+    margin-top: 3rem;
+}
+
+.faq__signin h3 {
+    text-align: center;
+}
+
+/*!======== Footer ============*/
+
+.footer {
+    background-color: black;
+    padding: 4rem 10rem 5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    width: 100%;
+}
+
+.footer h3 {
+    font-weight: 400;
+    color: #b6b6b6;
+    font-size: 1rem;
+}
+
+.footer p {
+    font-weight: 400;
+    color: #b6b6b6;
+    font-size: .8rem;
+}
+
+.footer__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+}
+
+.footer-item {
+    flex-basis: 33%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.footer-item a {
+    font-size: .8rem;
+    color: #b6b6b6;
+    text-decoration: underline;
+    margin: .35rem 0;
+}
+
+@media screen and (max-width:1280px) {
+
+    .header__content {
+        top: 60%;
+    }
+
+    .section__bg,
+    .navbar,
+    .footer {
+        padding-inline: 2rem;
+    }
+
+    .section__img video {
+        width: 420px;
+    }
+
+    .tv-2 .section__img video {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:1220px) {
+    .section__img video {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:1140px) {
+    .section__img video {
+        width: 370px;
+    }
+
+    .tv-2 .section__img video {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width:1040px) {
+    .section__img video {
+        width: 340px;
+    }
+
+    .tv-2 .section__img video {
+        width: 280px;
+    }
+}
+
+@media screen and (max-width:960px) {
+    .nav__logo img {
+        width: 130px;
+    }
+
+    .flex__center {
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+
+    .section__info {
+        text-align: center;
+    }
+
+    .section__img video {
+        width: 460px;
+    }
+
+    .tv-2 .section__img video {
+        width: 390px;
+    }
+
+    .mobile .section__info {
+        order: -1;
+    }
+
+    .question {
+        height: 5rem;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .nav__logo img {
+        width: 90px;
+    }
+
+    .header__content {
+        top: 60%;
+        width: 100%;
+        padding-inline: 1.5rem;
+    }
+
+    .nav__sign {
+        column-gap: .5rem;
+    }
+
+    .section__bg,
+    .navbar,
+    .footer {
+        padding-inline: 1rem;
+    }
+
+    .mobile .section__img .stranger-things-box {
+        bottom: 1rem;
+    }
+
+    .stranger-things-box img {
+        width: 30px;
+    }
+
+    .stranger-things-box .text .name {
+        font-size: .8rem;
+    }
+
+    .stranger-things-box .text p {
+        font-size: .7rem;
+    }
+
+    .input__box {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .input__box .input__control {
+        width: 100%;
+    }
+
+    .question {
+        height: 4.5rem;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .section__img video {
+        width: 420px;
+    }
+
+    .tv-2 .section__img video {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .footer-item {
+        flex-basis: 50%;
+    }
+
+    .mobile .section__img .stranger-things-box {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width:590px) {
+    .section__img video {
+        width: 390px;
+    }
+
+    .tv-2 .section__img video {
+        width: 320px;
+    }
+}
+
+@media screen and (max-width:535px) {
+    .section__img video {
+        width: 360px;
+    }
+
+    .tv-2 .section__img video {
+        width: 290px;
+    }
+}
+
+@media screen and (max-width:470px) {
+    .section__img video {
+        width: 300px;
+    }
+
+    .tv-2 .section__img video {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .section__img video {
+        width: 250px;
+    }
+
+    .tv-2 .section__img video {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .section__img video {
+        width: 220px;
+    }
+
+    .tv-2 .section__img video {
+        width: 180px;
+    }
+}
